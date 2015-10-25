@@ -1,0 +1,73 @@
+#include "FXLib.h"
+void Titry();
+void TvAndMen();
+void TvMest();
+
+    int main ()
+    {
+
+    txPlaySound ("msc.wav");
+    txCreateWindow (1200, 700);
+    Titry();
+    txTextOut (500, 350, "Люди купили себе телевизор");
+    txSleep (1000);
+    txClear();
+    TvAndMen();
+    TvMest();
+
+    }
+
+void Titry()
+    {
+    int t = 0;
+
+    while (t <= 100)
+        {
+        t++;
+        txSetColor (TX_BLACK);
+        txTextOut (-600+t*18, 200, "История одного козла (часть 2) (Автор: Иван Черемисенов)");
+
+        txSleep (70);
+        txSetFillColor (TX_WHITE);
+        txClear();
+        }
+    }
+
+void TvAndMen()
+    {
+    int t= 0;
+
+    while (t <= 20)
+        {
+        t++;
+
+        FxDrawTv (RGB (random (0, 254), random (0, 254), random (0, 254)), TX_BLACK, 500, 350);
+        FxDrawMan (350, 350, 0, t%2*20, 0);
+        FxDrawMan (650 + 172, 350, t%2*20, 0, 0);
+
+        txSleep (200);
+        txSetFillColor (TX_WHITE);
+        txClear ();
+
+
+        }
+    }
+
+void TvMest()
+    {
+
+    int t;
+    while (t <= 100)
+        {
+        t++;
+
+        FxDrawBee (TX_
+        FxDrawGoat (100+t*9, 350, t%2*20, t%2*2, 1);
+        FxDrawTv (RGB (random (0, 254), random (0, 254), random (0, 254)), TX_BLACK, 100+t*9, 350-114);
+
+        txSleep (70);
+        txSetFillColor (TX_WHITE);
+        txClear();
+        }
+
+    }
